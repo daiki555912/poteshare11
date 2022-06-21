@@ -5,12 +5,14 @@
     <% end %>
   </div>
 
-  <%= search_form_for@search,url: search_rooms_path do |f| %>
-    <%= f.search_field :address_cont,placeholder: 'エリア' %>
+  <%= search_form_for @search, url: search_rooms_path do |f| %>
+    <%= f.label :roomname_or_introduction_or_address_cont, "キーワード" %>
+    <%= f.search_field :address_or_roomname_or_roomabout_cont %>
   <% end %>
 
-  <%= search_form_for@search,url: search_rooms_path do |f| %>
-    <%= f.search_field :roomabout_or_address_or_roomname_cont, placeholder: 'キーワード' %>
+  <%= search_form_for @search, url: search_rooms_path do |f| %>
+    <%= f.label :address_cont, "エリア" %>
+    <%= f.search_field :address_cont %>
   <% end %>
 
   <div class="link">
@@ -25,7 +27,9 @@
                     <div class="dropdown__list">
                       <%= link_to "ルーム情報登録", new_room_path %>
                     </div>
-                    <li class="dropdown__list"><a href="#">予約済みルーム一覧</a></li>
+                    <div class="dropdown__list">
+                      <%= link_to "予約済みルーム一覧", bookings_path %>
+                    </div>
                     <div class="dropdown__list">
                       <%= link_to "登録済みルーム一覧", rooms_path %>
                     </div>

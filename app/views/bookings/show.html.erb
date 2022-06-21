@@ -1,2 +1,29 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div class="booking-show-all">
+
+  <div class="booking-show-about">
+
+    <div class="show-roomname">
+      <p class="booking-label">予約した部屋</p>
+      <%= @room.roomname %>
+    </div>
+
+    <div class="show-start">
+      <p class="booking-label">開始日</p>
+      <%= @booking.start_date.strftime("%Y年%m月%d日") %>
+    </div>
+
+    <div class="show-last">
+      <p class="booking-label">終了日</p>
+      <%= @booking.last_date.strftime("%Y年%m月%d日") %>
+    </div>
+
+    <div class="show-allcost">
+      <p class="booking-label">合計金額</p>
+      <p><%= @booking.allcost %>円</p>
+    </div>
+
+  </div>
+    
+</div>
+  
+

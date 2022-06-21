@@ -7,7 +7,9 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :bookings
-
-  
+  resources :bookings do
+    collection do
+      post :confirm
+    end
+  end
 end

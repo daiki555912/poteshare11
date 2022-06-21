@@ -5,23 +5,28 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
-    @booking = Booking.new
   end
 
   def new
-    @room = Room.new(params.permit(:roomname, :roomabout, :cost, :address, :image, :room_id))
+    @room = Room.new(params.permit(:roomname, :roomabout, :cost, :address, :image, :user_id))
   end
 
   def create
-    @room = Room.new(room_params)
+    @room = Room.create(room_params)
     @room.user_id = current_user.id
-    @room.save
-    binding.pry
-    redirect_to room_path(@room.id)
+    if @room.save
+      redirect_to new_booking_path(@room.id)
+    else
+      render "new"
+    end
+  end
+
+  def search
+    @results = @search.result
   end
 
   private
   def room_params
-    params.require(:room).permit(:room_id, :roomname, :roomabout, :cost, :address, :image)
+    params.require(:room).permit(:roomname, :roomabout, :cost, :address, :image, :user_id)
   end
 end

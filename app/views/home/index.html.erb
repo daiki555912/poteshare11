@@ -1,2 +1,38 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="top-all">
+  <div class="top-first">
+    <div class="center-search">
+      <p>Potepan Shareでまだ体験したことのない旅をしよう</p>
+      <%= search_form_for @search, url: search_rooms_path do |f| %>
+        <%= f.label :address_cont, "エリア" %><br>
+       
+        <div class="address-cont">
+          <%= f.search_field :address_cont %>
+        </div>
+        <div class="center-submit">
+          <%= f.submit '検索' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="top-second">
+    <div class="second-p">
+      <p>おすすめのエリア</p>
+    </div>
+
+    <div class="recomend">
+      <div class="tokyo">
+        <p>東京</p>
+      </div>
+      <div class="osaka">
+        <p>大阪</p>
+      </div>
+      <div class="kyoto">
+        <p>京都</p>
+      </div>
+      <div class="sapporo">
+        <p>札幌</p>
+      </div>
+    </div>
+  </div>
+</div>

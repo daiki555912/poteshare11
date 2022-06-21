@@ -16,7 +16,7 @@
           <tr>
             <td class="r-img"><%= image_tag room.image if room.image.attached? %></td>
             <td>
-              <%= link_to room_path(room.id) do %>
+              <%= link_to new_booking_path(room.id) do %>
                 <%= room.roomname %>
               <% end %>
             </td>

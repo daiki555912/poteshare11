@@ -98,3 +98,34 @@ table td {
   width: 20%;
 }
 
+.search-header {
+  font-size: 20px;
+  margin: 15px
+}
+
+.search-all {
+  display: flex;
+}
+
+.search-about {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.table {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.data {
+  border: solid 2px;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+

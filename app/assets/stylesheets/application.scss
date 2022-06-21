@@ -121,3 +121,132 @@
   right: 15px;
   top: calc(50% - 5px);
 }
+
+.top-first {
+  background-image: url(img_cover_top.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 530px;
+  display: inline-block;
+}
+
+.center-search {
+  background-color: #fff;
+  padding: 30px;
+  width: 450px;
+  border-radius: 10px;
+  margin: 180px 50px;
+}
+
+.center-search p {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.address-cont input#q_address_cont {
+  width: 100%;
+  height: 25px;
+  margin: 5px 0;
+}
+
+.center-submit input {
+  width: 100%;
+  background-color: #3492d1;
+  color: #fff;
+}
+
+.second-p {
+  padding: 10px;
+}
+
+.second-p p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.recomend {
+  display: flex;
+  padding: 30px;
+}
+
+.tokyo {
+  background-image: url(img_tokyo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 500px;
+  display: flex;
+  margin: 0 20px;
+  position: relative;
+}
+
+.tokyo p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.osaka {
+  background-image: url(img_osaka.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 500px;
+  display: flex;
+  margin: 0 20px;
+  position: relative;
+
+}
+
+.osaka p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.kyoto {
+  background-image: url(img_kyoto.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 20%;
+  display: flex;
+  margin: 0 20px;
+  position: relative;
+}
+
+.kyoto p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sapporo {
+  background-image: url(img_sapporo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 500px;
+  display: flex;
+  margin: 0 20px;
+  position: relative;
+}
+
+.sapporo p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
