@@ -1,0 +1,17 @@
+<div class="search-all">
+  <h2>検索結果</h2>
+
+  <%= @results.each do |room| %>
+
+    <% if room.image.attached? %>
+      <%= image_tag room.image %>
+    <% end %>
+
+    <%= room.roomname %>
+
+    <%= room.address %>
+
+    <p>¥<%= room.cost %>/日</p>
+    
+  <% end %>
+</div>

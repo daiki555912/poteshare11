@@ -1,0 +1,56 @@
+<div id="header">
+  <div class="logo">
+    <%= link_to root_path, class: "navbar-item" do %>
+      <h1 class="title is-4" style="font-family: cursive;">Pote Share</h1>
+    <% end %>
+  </div>
+
+  <%= search_form_for@search,url: search_rooms_path do |f| %>
+    <%= f.search_field :address_cont,placeholder: 'エリア' %>
+  <% end %>
+
+  <%= search_form_for@search,url: search_rooms_path do |f| %>
+    <%= f.search_field :roomabout_or_address_or_roomname_cont, placeholder: 'キーワード' %>
+  <% end %>
+
+  <div class="link">
+    <ul id="nav">
+      <% if user_signed_in? %>
+        <li>
+          <div class="gnavi__wrap">
+            <ul class="gnavi__lists">
+              <li class="gnavi__list">
+                  <a href="#">メニュー</a>
+                  <ul class="dropdown__lists">
+                    <div class="dropdown__list">
+                      <%= link_to "ルーム情報登録", new_room_path %>
+                    </div>
+                    <li class="dropdown__list"><a href="#">予約済みルーム一覧</a></li>
+                    <div class="dropdown__list">
+                      <%= link_to "登録済みルーム一覧", rooms_path %>
+                    </div>
+                    <div class="dropdown__list">
+                      <%= link_to "アカウント編集", edit_user_registration_path %>
+                    </div>
+                    <div class="dropdown__list">
+                      <%= link_to "プロフィール編集", edit_user_path(current_user) %> 
+                    </div>
+                  </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :get %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "ログイン", new_user_session_path %>
+        </li>
+        <li>
+          <%= link_to "新規登録", new_user_registration_path %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

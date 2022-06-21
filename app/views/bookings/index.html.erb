@@ -1,0 +1,40 @@
+<h1>Bookings#index</h1>
+<p>Find me in app/views/bookings/index.html.erb</p>
+<h1 class="h1">予約済みルーム一覧</h1>
+<div class="booking-list">
+  <table>
+      <thead>
+        <tr>
+          <th>ルーム画像</th>
+          <th>ルーム名</th>
+          <th>ルーム紹介</th>
+          <th>合計金額</th>
+          <th>開始日</th>
+          <th>終了日</th>
+          <th>予約確定日時</th>
+        </tr>
+      </thead>
+ 
+      <tbody>
+        <div>
+          <% @rooms.each do |room| %>
+            <tr>
+              <td class="r-img"><%= image_tag room.image if room.image.attached? %></td>
+              <td><%= room.roomname %></td>
+              <td><%= room.roomabout %></td>
+            </tr>
+          <% end %>
+
+          <% @bookings.each do |booking| %>
+            <tr>
+              <td></td>
+              <td><%= booking.start_date %></td>
+              <td><%= booking.last_date %></td>
+              <td><%= booking.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+            </tr>
+          <% end %>
+        </div>
+      </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,35 @@
+<div class="rooms-page-all">
+  <h1>ルーム情報登録</h1>
+
+  <%= form_with model: @room do |form| %>
+
+    <div class="rooms-field">
+      <%= form.label :roomname, "ルーム名" %>
+      <%= form.text_field :roomname %>
+    </div>
+    <div class="rooms-field">
+      <%= form.label :roomabout, "ルーム紹介" %><br>
+      <%= form.text_area :roomabout %>
+    </div>
+    <div class="rooms-field">
+      <%= form.label :cost, "料金" %><br>
+      <%= form.number_field :cost %>
+    </div>
+    <div class="rooms-field">
+      <%= form.label :address, "住所" %>
+      <%= form.text_field :address %>
+    </div>
+
+    <div class="rooms-field">
+      <%= form.label :image, "ルーム画像" %><br>
+      <%= form.file_field :image %><br>
+    </div>
+
+    <%= form.hidden_field :user_id, value: current_user.id %>
+    <%= form.hidden_field :room_id, value: @room.id %>
+
+    <div class="rooms-field">
+      <%= form.submit "登録する" %>
+    </div>
+  <% end %>
+</div>
