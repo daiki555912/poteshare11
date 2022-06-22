@@ -1,0 +1,252 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bulma";
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 10px;
+}
+
+#header h1 {
+  color: #fff;
+  
+}
+
+#header #nav {
+  list-style: none;
+  display: flex;
+}
+   
+#header #nav li {
+  width: 240px;
+  text-align: center;
+  background-color: #333;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2px;
+}
+   
+#header #nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+#footer {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.toast .notice {
+  background-color: lightgreen;
+  color: darkgreen;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.toast .alert {
+  background-color: darkred;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.dropdown__lists {
+  display: none;/*デフォルトでは非表示の状態にしておく*/
+  width: 100%;
+  top: 60px;
+  left: 0;
+}
+.gnavi__list:hover .dropdown__lists {
+  display: block;/*Gナビメニューにホバーしたら表示*/
+}
+.dropdown__list {
+  background-color: #004d80;
+  height: 60px;
+  transition: all .3s;
+  position: relative;
+}
+.dropdown__list:not(:first-child)::before{
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #3492d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.dropdown__list:hover {
+  background-color: #003558;
+}
+.dropdown__list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+.dropdown__list a::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: rotate(135deg);
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 5px);
+}
+
+.top-first {
+  background-image: url(img_cover_top.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 530px;
+  display: inline-block;
+}
+
+.center-search {
+  background-color: #fff;
+  padding: 30px;
+  width: 450px;
+  border-radius: 10px;
+  margin: 180px 50px;
+}
+
+.center-search p {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.address-cont input#q_address_cont {
+  width: 100%;
+  height: 25px;
+  margin: 5px 0;
+}
+
+.center-submit input {
+  width: 100%;
+  background-color: #3492d1;
+  color: #fff;
+}
+
+.second-p {
+  padding: 10px;
+}
+
+.second-p p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.recomend {
+  display: flex;
+  padding: 30px;
+}
+
+.tokyo {
+  background-image: url(img_tokyo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 500px;
+  display: flex;
+  margin: 0 20px;
+  position: relative;
+}
+
+.tokyo p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.osaka {
+  background-image: url(img_osaka.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 500px;
+  display: flex;
+  margin: 0 20px;
+  position: relative;
+
+}
+
+.osaka p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.kyoto {
+  background-image: url(img_kyoto.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 20%;
+  display: flex;
+  margin: 0 20px;
+  position: relative;
+}
+
+.kyoto p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sapporo {
+  background-image: url(img_sapporo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 500px;
+  display: flex;
+  margin: 0 20px;
+  position: relative;
+}
+
+.sapporo p {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}

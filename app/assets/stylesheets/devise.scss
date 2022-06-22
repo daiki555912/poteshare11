@@ -1,0 +1,53 @@
+#registrations-new, #sessions-new,[type="text"], [type="email"], input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  justify-content: center;
+}
+
+#registrations-top, #sessions-top {
+  padding: 10px;
+  margin: 0 30%;
+}
+
+#registrations-top, #sessions-top h2 {
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.field label, em {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.field i {
+  font-size: 10px;
+}
+
+#user_username, #user_introduction{
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  justify-content: center;
+}
+
+#registrations-edit-top {
+  padding: 0 30%;
+}
+
+#registrations-edit-top h2 {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}

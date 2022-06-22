@@ -1,0 +1,48 @@
+<div class="confirm-all">
+  <h2 class="conf-h2">予約内容確認</h2>
+
+  <div class="confirm-about">
+    <%= form_for @booking do |f| %>
+      <div class="conf-cost">
+        <p class="booking-label">¥<%= @room.cost %>/日</p>
+      </div>
+      <div class="start-day">
+        <p class="booking-label">開始日</p>
+        <%= @booking.start_date %>
+      </div>
+
+      <div class="last-day">
+        <p class="booking-label">終了日</p>
+        <%= @booking.last_date %>
+      </div>
+
+      <div class="rental-days">
+        <p class="booking-label">使用日数</p>
+        <p><%= @booking.days %>日</p>
+      </div>
+
+      <div class="people">
+        <p class="booking-label">人数</p>
+        <p><%= @booking.people %>人</p>
+      </div>
+
+      <div class="all-cost">
+        <p class="booking-label">合計金額</p>
+        <p><%= @booking.allcost %>円</p>
+      </div>
+
+      <p class="conf-info">上記の内容でよろしければ「予約確定」を押してください</p>
+      ___________________________________________________________
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :room_id, value: @room.id %>
+      <%= f.hidden_field :booking_id, value: @booking.id %>
+      <div class="conf-submit">
+        <%= f.submit "予約確定" %><br>
+      </div>
+
+      <%= link_to "ルーム詳細に戻る", room_path(@booking.room_id) %>
+      
+      <% end %>
+  </div>
+    
+</div>

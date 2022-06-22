@@ -1,0 +1,35 @@
+<div class="users-page-all">
+  <h1>プロフィール編集</h1>
+
+  <%= form_for @user do |f| %>
+    
+    <div class="user-image">
+      <% if @user.image.attached? %>
+        <%= image_tag @user.image %>
+      <% end %>
+    </div>
+
+    <div class="users-field">
+      <%= f.label :image, "アイコン画像" %><br>
+      <%= f.file_field :image %>
+    </div>
+
+    <div class="users-field">
+      <%= f.label :username, "ユーザー名" %>
+      <%= f.text_field :username %>
+    </div>
+    <div class="users-field">
+      <%= f.label :introduction, "自己紹介" %>
+      <%= f.text_area :introduction %>
+    </div>
+    <div class="users-field">
+      <%= f.label :email, "メールアドレス" %>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="users-actions">
+      <%= f.submit "編集する" %>
+    </div>
+
+  <% end %>
+</div>

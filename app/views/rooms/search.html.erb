@@ -1,0 +1,28 @@
+<div class="search-header">
+  <h2 >検索結果</h2>
+</div>
+
+<div class="serch-all">
+  <div class="search-about"> 
+    <div class="table">
+      <% @results.each do |room| %>
+       <div class="data">
+
+        <%= link_to new_booking_path(room.id) do %>
+          <% if room.image.attached? %>
+            <%= image_tag room.image %>
+          <% end %><br>
+        <% end %>
+
+        <%= link_to new_booking_path(room.id) do %>
+          <%= room.roomname %>
+        <% end %><br>
+
+        <%= room.address %>
+
+        <p>¥ <%= room.cost %> /日</p><br>
+       </div><br>
+      <% end %>
+    </div>
+  </div>
+</div>
